@@ -6,12 +6,49 @@
 	<title>Pseudo-class Selector notes</title>
 	
 	<style>
+	/*All list entries within the header should have no bullet points*/
+	header li{
+		list-style: none;
+	}
 	
+	/*Whenever an <a> tag is a link, or is a visited link, there should be no underline,
+	the color should be green, and there should be a small border indicating a button
+	and they should be in-line as opposed to creating new lines*/
+	a:link, a:visited{
+		text-decoration:none;
+		background-color:green;
+		border: 1px solid blue;
+		color: black;
+		display: block;
+		width: 200px;
+		text-align: center;
+		margin-bottom: 1px;
+	}
+	
+	/*Whenever an <a> tag is active (being clicked) or is hovered over, make the background grey
+	and the text color purple*/
+	a:hover, a:active{
+		background-color: grey;
+		color: LightGrey;
+		
+	}
+	
+	/*for the 3rd button, specifically, whatever it is*/
+	header li:nth-child(3){
+		font-size: 24px;
+	}
 	</style>
 </head>
 
 <body>
-
+ <header> 
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="testing.html">Notes</a></li>
+		<li><a href="pseudo-class selectors.html">Pseudo-class Selector notes</a></li>
+		<li>To Be Used</li>
+	</ul>
+ </header>
 </body>
 
 </html>
