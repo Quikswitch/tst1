@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Name of Page!</title>
+	
+	<style>
+	/*CSS*/
+	/*Turn all "p" tags' text red, unless otherwise specified*/
+		p{
+			color: red;
+		}
+
+	
+	/*"selector" by class*/
+
+		.blue{
+			color: blue;
+		}
+
+	
+	/*"selector" by tag ID*/
+
+		#green, #alsoGreen{
+			color: green;
+		}
+
+	
+	/*Combining selectors*/
+	/*When combining selectors, the order of the rules/selectors DOES matter.
+	Last on the page is last implemented, like layers of paint overwriting each other*/
+		/*All <p> elements with a class of "big" use 10 pt font*/
+		article.big{
+			font-size: 20px;
+		}
+		/*all <p> elements that are children of span elements in any way*/
+		div article{
+			color: orange;
+		}
+		/*all <p> elements that are direct children of span elements*/
+		div > article{
+			color: grey;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	<!--Page Header-->
+	<header><h1>Top of page, company logo, etc</h1> <span><a href="pseudo-class selectors.html">Menu</a> (link here to reduce capatability errors when writing notes)</span></header>
+	<!--Headlines-->
+	<h1>h1</h1>
+	<h2>h2</h2>
+	<!-- Sections -->
+	<section>
+		Section 1
+		<!-- Articles often go in sections -->
+		<article>Article 1</article>
+		<article>Article 2</article>
+	</section>
+	
+	<!-- Lists -->
+	<!-- Unordered List -->
+	<div>Unordered List:
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<!-- Unordered Lists can be nested! -->
+			<li>Secondary List
+				<ul>
+					<li>Item 3</li>
+					<li>Item 4</li>
+				</ul>
+			</li>
+			<li>Item 5</li>
+		</ul>
+	</div>
+	
+	<!-- Ordered Lists -->
+	<div id="goto">Ordered List:
+		<ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<!-- Ordered Lists can also be nested! -->
+			<li>Secondary List
+				<ol>
+					<li>Item 4</li>
+					<li>Item 5</li>
+					<li>Item 6</li>
+				</ol>
+			</li>
+			<li>Item 7</li>
+		</ol>
+	</div>
+	
+	<!-- Characters that require explicit escape to print -->
+	<div> Note: the following is not a definitive list.
+	<ul>
+		<li>Ampersand - &amp; - Print with: &amp;amp;</li>
+		<li>Less Than - &lt; - Print with: &amp;lt;</li>
+		<li>Greater Than - &gt; - Print with: &amp;gt;</li>
+		<li>Copyright - &copy; - Print with: &amp;copy;</li>
+		<li>Non-line-breaking-space - &nbsp; - Print with: &amp;nbsp;</li>
+	</ul>
+	</div>
+	
+	<!-- HYPERlinks -->
+	<div>
+		<!--local link-->
+		<a href="index.html" title="Title is useful for some impaired users"> This is the link text! Goes to the main index.html</a>
+	</div>
+	<div>
+		<!--internet link; target="_blank" is a property that tells the browser to open a new tab with the link-->
+		<a href="https://www.google.com/" title="this link goes to google and opens a new tab" target="_blank"> And this one goes to google</a>
+	</div>
+	<div>
+		<!-- in-page link to another HTML tag -->
+		<a href="#goto">Click here to go to the list again</a>
+	</div>
+	
+	<!-- Images! -->
+	<div>
+		<!--fact: src can also be an internet link-->
+		<img src="image.png" width="400" height="200" alt="the alt tag can be read aloud to describe the picture">
+	</div>
+	
+	
+	<div>
+		
+		<p>This should be red</p>
+		
+		
+		<p class="blue">This should be blue</p>
+		
+		
+		<p id="green">This should be green</p>
+		<p id="alsoGreen">This should also be green</p>
+		
+		<div>
+			<div>
+				<article>This should be grey <article>but this will be orange</article></article>
+				<article class = "big">This will be grey and big <article class = "big">but this will be orange and big</article></article>
+				<div class = "big">This will not be big at all</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
