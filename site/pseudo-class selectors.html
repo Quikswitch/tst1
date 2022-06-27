@@ -9,21 +9,23 @@
 	
 	<style>
 		/*for the 3rd button, specifically, whatever it is (in this case, the link to this page)*/
-		header li:nth-child(3){
-			font-size: 24px;
+		header span:nth-child(3) > a{
+			color: #B22222;
+			text-transform: uppercase;
 		}
 	</style>
 </head>
 
 <body>
  <header> 
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="notes.html">Notes</a></li>
-		<li><a href="pseudo-class selectors.html">Pseudo-class Selector notes</a></li>
-		<li><a href="testing.html">Current tests</a></li>
-	</ul>
+	<header> 
+		<span><a href="index.html" class="menu">Home</a></span>
+		<span><a href="notes.html" class="menu">Notes</a></span>
+		<span><a href="pseudo-class selectors.html" class="menu">Pseudo-class Selector notes</a></span>
+		<span><a href="testing.html" class="menu">Current tests</a></span>
+	</header>
  </header>
+ <p>Notes mostly present in style.css</p>
 </body>
 
 </html>

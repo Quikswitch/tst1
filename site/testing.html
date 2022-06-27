@@ -6,11 +6,13 @@
 <title>Testing Grounds</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="notes.css">
 
 <style>
 	/*for the 4th button, specifically, whatever it is (in this case, the link to this page)*/
-	header li:nth-child(4){
-		font-size: 24px;
+	header span:nth-child(4) > a{
+		color: #B22222;
+		text-transform: uppercase;
 	}
 
 </style>
@@ -19,14 +21,39 @@
 
 <body>
 	<header> 
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="notes.html">Notes</a></li>
-			<li><a href="pseudo-class selectors.html">Pseudo-class Selector notes</a></li>
-			<li><a href="testing.html">Current tests</a></li>
-		</ul>
+		<span><a href="index.html" class="menu">Home</a></span>
+		<span><a href="notes.html" class="menu">Notes</a></span>
+		<span><a href="pseudo-class selectors.html" class="menu">Pseudo-class Selector notes</a></span>
+		<span><a href="testing.html" class="menu">Current tests</a></span>
 	</header>
-
+	<p> Text here for testing </p>
+	<p><span>Text here for testing</span></p>
+	<p> Text here for testing </p>
+	
+	<div id="divbg">
+		
+	</div>
+	
+	<div>
+		<p class="floating" style="background-color: red;"></p>
+		<p class="floating" style="background-color: blue;"></p>
+		<p class="floating" style="background-color: green;"></p>
+		<p class="floating" style="background-color: orange;"></p>
+	</div>
+	
+	<div id="afterfloating">
+		This text should not be behind the large colored boxes
+	</div>
+	
+	<div class="container">
+		<div class="absolute"></div>
+		<div class="breaker"></div>
+		<div class="relative"></div>
+		<div class="breaker"></div>
+		<div class="fixed">Stays with you</div>
+		<div class="breaker"></div>
+		<div class="sticky">Doesn't want to be left alone</div>
+	</div>
 </body>
 
 </html>

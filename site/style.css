@@ -1,7 +1,7 @@
 	/*CSS for a menu for the site*/
 	
 	/*All list entries within the header should have no bullet points*/
-	header li{
+	header span{
 		list-style: none;
 	}
 	
@@ -13,10 +13,12 @@
 		background-color:green;
 		border: 1px solid blue;
 		color: black;
-		display: block;
-		width: 200px;
+		width: 300px;
 		text-align: center;
-		margin-bottom: 1px;
+		margin: -3px;
+		margin-bottom: 0px;
+		display: inline-block;
+		box-sizing: border-box;
 	}
 	
 	/*Whenever an <a> tag is active (being clicked) or is hovered over, make the background grey
@@ -24,5 +26,4 @@
 	a:hover, a:active{
 		background-color: grey;
 		color: LightGrey;
-		
 	}

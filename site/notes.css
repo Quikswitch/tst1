@@ -1,0 +1,122 @@
+/* Notes for some CSS */
+/* Ways to manipulate text */
+
+p {
+	/* font-family is organized as such: "Desired font name", fallback "family" of fonts to use, most generic type possible as last-resort */
+	font-family: "Times New Roman", Times, serif;
+	color: red;
+	background-color: orange;
+	/* font-style determines whether or not the font is oblique, italic, etc */
+	font-style: italic;
+	/* font-weight determines "boldness" of text */
+	font-weight: 100;
+	font-size: 24px;
+	/* text-transform allows various changes to the affected text, like manipulating case */
+	text-transform: uppercase;
+	text-align: center;
+	
+	
+}
+
+/*Notes for box model and box manipulation */
+p > span {
+	/* padding works by defining padding in the order -top -right -bottom -left */
+	padding: 1px 10px 1px 10px;
+	background-color: blue;
+	border: 3px solid maroon;
+	/* how close to the edge it is */
+	margin: 40px;
+	width: 300px;
+	/* This command makes sure that the specified width of the element is exactly as specified,
+	includes all padding and borders*/
+	box-sizing: border-box;
+}
+
+/*Background notes*/
+
+#divbg {
+	width: 800px;
+	height: 500px;
+	background-color: blue;
+	background-image: url("image.png");
+	/*determines background image repeatition*/
+	background-repeat: no-repeat;
+	background-position: center;
+	/* the following is functionally identical to the followed commands */
+	/* background: url("image.png") blue no-repeat center; */
+}
+
+/* Floating Notes */
+
+.floating{
+	width: 100px;
+	height: 100px;
+	border: black solid 1px;
+	/* float is an alternative layout method which aligns with the top-left or top-right of the container */
+	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	box-sizing: border-box;
+}
+
+#afterfloating{
+	background: maroon;
+	font-size: 40px;
+	/* clear forces the element selected to only be drawn AFTER all floating elements indicated are finished */
+	clear: right;
+}
+
+/* Absolute and Relative notes */
+
+/* Absolute positioning does NOT inherit positioning from direct parents, but will inherit from
+any ancestor that has absolute or relative positioning
+and other content in the "normal flow"
+DOES take the loss into account */
+.absolute {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: red;
+	left: 300px;
+	top: 100px;
+}
+
+/* Relative positioning does inherit positioning from parents, as it is offset from its "normal flow" position
+Other content, however, does NOT take the loss into account */
+.relative {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	left: 300px;
+	top: 100px;
+	background: green;
+}
+
+/* Fixed positioning moves with the page to stay at the same place in the viewport, and other content DOES take the loss
+into account */
+.fixed {
+	position: fixed;
+	left: 350px;
+	top: 100px;
+	background: orange;
+	border: black solid 1px;
+	box-sizing: border-box;
+}
+
+/* Sticky positioning acts like relative positioning until the user scrolls past, then it behaves as fixed position;
+good use for headers with navigation menus */
+.sticky {
+	position: sticky;
+	background: blue;
+	top: 0;
+	border: black solid 3px;
+	box-sizing: border-box;
+}
+
+.breaker{
+	background-color:grey; width: 150px; height: 150px;
+}
+
+.container{
+	background: black;
+}
